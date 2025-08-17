@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "air" # Currently available options are "default", "air"
-title                    : "Home"
+title                    : "Ashwin S. Pothen"
 title_separator          : "-"
 name                     : "Ashwin S. Pothen" #&name 
-description              : "PhD Student in Operations Research" #&description 
+description              : "Personal Website" #&description 
 url                      : https://ashwin-pothen.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ashwin-pothen/ashwin-pothen.github.io"
