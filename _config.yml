@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Your Name / Site Title"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Ashwin S. Pothen"
 description              : &description "PhD Student in Operations Research"
@@ -22,14 +22,14 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "ashwin_website.jpg"
+  name             : "Ashwin S. Pothen"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "PhD Student in Operations Research"
   location         : "Atlanta, USA"
   employer         : "Georgia Institute of Technology"
   uri              : # URL
-  email            : "[first name].[last name]@gatech.edu" 
+  email            : "ashwin.pothen@gatech.edu" 
 
   # Academic websites
   academia         : # URL
