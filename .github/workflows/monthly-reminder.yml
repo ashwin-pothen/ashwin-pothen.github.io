@@ -1,0 +1,50 @@
+name: Monthly Website Update Reminder
+
+on:
+  schedule:
+    # Runs at 9:00 AM UTC on the 1st of every month
+    - cron: '0 9 1 * *'
+  workflow_dispatch: # allows manual trigger from GitHub Actions UI
+
+jobs:
+  send-discord-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Discord reminder
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -s -o /dev/null -w "%{http_code}\n" -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "📋 Monthly Website Update Reminder",
+                "description": "Hey Ashwin! Time to review your academic website and add anything new from the past month.",
+                "color": 5793266,
+                "fields": [
+                  {
+                    "name": "📄 Publications",
+                    "value": "Any new papers submitted, accepted, or published?",
+                    "inline": false
+                  },
+                  {
+                    "name": "🎤 Talks",
+                    "value": "Any upcoming or recent conference presentations?",
+                    "inline": false
+                  },
+                  {
+                    "name": "📚 Teaching",
+                    "value": "Any new TA roles or courses to add?",
+                    "inline": false
+                  },
+                  {
+                    "name": "📝 CV",
+                    "value": "Any new skills, awards, or experience to log?",
+                    "inline": false
+                  }
+                ],
+                "footer": {
+                  "text": "ashwin-pothen.github.io • Monthly reminder"
+                }
+              }]
+            }'
